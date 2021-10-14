@@ -1,0 +1,58 @@
+﻿@model PharmacySysyem.Models.Stock
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StockName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckStockMain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckStockMain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckStockUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckStockUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,269 @@
+﻿@model PharmacySysyem.Models.OpenningBalanceM
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <!-- THIS IS BOOTSTRAP ALERT -->
+        <div class='alert alert-success' style='display:none' id='bootstrap-alert'>
+            Success! (Successfully)
+        </div>
+        <button onclick="showAlertsSuccess()">Show Alerts</button>
+        <!-- THIS IS BOOTSTRAP ALERT -->
+        <div class='alert alert-danger' style='display:none' id='bootstrap-alert-Danger'>
+            Danger! (Error)
+        </div>
+        <button onclick="showAlertsDanger()">Show Danger</button>
+        <br>
+        <div class="modal-content " style="background-color:rgba(255,255,255,0.40);max-height: calc(100vh - 200px);
+    overflow-y: auto;">
+            <div class="modal-header">
+                <h style="color:rgb(0, 0, 0);font-size:50px;margin-left:300px; font-weight:bold">Openning Balance</h>
+            </div>
+            <div id="ModalBody" class="modal-body" style="max-height: calc(100vh - 200px);
+    overflow-y: auto;">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.ItemCardMasterID, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("ItemCardMasterID", null, htmlAttributes: new { @id = "ItemCardMasterID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ItemCardMasterID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @id = "Date", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="modal-header">
+                    <h style="color:rgb(0, 0, 0);font-size:large; font-weight:bold">Detalis</h>
+                </div>
+                <div id="ModalBody" class="modal-body" style="max-height: calc(100vh - 200px);
+    overflow-y: auto;">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            @Html.LabelFor(model => model.ItemCardMasterID, "Stock", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownList("StockID", null, new { @id = "StockID", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ItemCardMasterID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            @Html.LabelFor(model => model.ItemCardMasterID, "Unit", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownList("UnitID", null, new { @id = "UnitID", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ItemCardMasterID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            @Html.LabelFor(model => model.ItemCardMasterID, "Expir", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <input type="date" id="ExpertDate" name="Patch" placeholder="Patch" class="form-control" required />
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            @Html.LabelFor(model => model.ItemCardMasterID, "Patch", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <input type="text" id="Patch" name="Patch" placeholder="Patch" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            @Html.LabelFor(model => model.ItemCardMasterID, "Qty", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <input type="text" id="Qty" name="Qty" placeholder="Qty" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-1"><span class="pull-right"><a id="addToList" class="btn btn-primary glyphicon glyphicon-arrow-down"></a></span></div>
+                    </div>
+                    <table id="detailsTable" class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                                <th style="width:20%"></th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color:white"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-default" data-dismiss="modal">@Html.ActionLink("Back to List", "Index")</button>
+                <button id="saveOpenning" type="submit" value="Create" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+}
+<style>
+    #bootstrap-alert {
+        margin: auto;
+        padding: 10px;
+        /*width: 500px;*/
+        box-shadow: 1px 1px 3px black;
+    }
+
+    #bootstrap-alert-Danger {
+        margin: auto;
+        padding: 10px;
+        /*width: 500px;*/
+        box-shadow: 1px 1px 3px black;
+        background-color: #ff6347;
+    }
+</style>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        //Alerts
+        function showAlertsSuccess() {
+            document.getElementById('bootstrap-alert').style.display = 'block';
+            setTimeout(function () { document.getElementById('bootstrap-alert').style.display = 'none' }, 3000);
+            //THIS IS JS ALERT
+            // alert('success! (JS alert)');
+        }
+        function showAlertsDanger() {
+            document.getElementById('bootstrap-alert-Danger').style.display = 'block';
+            setTimeout(function () { document.getElementById('bootstrap-alert-Danger').style.display = 'none' }, 3000);
+            //THIS IS JS ALERT
+            // alert('success! (JS alert)');
+        }
+        //ColumnHide
+        function ColumnHide() {
+            $('tbody tr td:nth-child(1)').hide(0);
+            $('tbody tr td:nth-child(2)').hide(0);
+            // $('tbody tr td:nth-child(4)').hide(0);
+        }
+        //Add Multiple Order.
+        $("#addToList").click(function (e) {
+            e.preventDefault();
+           // checkItemOpenningBalance();
+            if ($.trim($("#ItemCardMasterID").val()) == "" || $.trim($("#Date").val()) == "" || $.trim($("#StockID").val()) == "" || $.trim($("#UnitID").val()) == "" || $.trim($("#Qty").val()) == "") {
+                alert("Plz fill the item details!!");
+                return;
+            }
+            else
+                //declar var to
+                var StockID = $("#StockID").val(),
+            UnitID = $("#UnitID").val(),
+            UnitName = $("#UnitID option:selected").text(),
+            StockName = $("#StockID option:selected").text(),
+            ExpertDate = $("#ExpertDate").val(),
+            PatchID = $("#Patch").val(),
+            Qty = $("#Qty").val(),
+            detailsTableBody = $("#detailsTable tbody");
+            //add detailsTableBody
+            var Detalis = '<tr><td>' + StockID + '</td><td>' + StockName + '</td><td>' + UnitID + '</td><td>' + UnitName + '</td><td>' + ExpertDate + '</td><td>' + PatchID + '</td><td>' + Qty + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
+            detailsTableBody.append(Detalis);
+            clearItem();
+            $('tbody tr td:nth-child(1)').hide(0);
+            $('tbody tr td:nth-child(3)').hide(0);
+        });
+        //Event On mouseout send Ajax By Function
+        $("#ItemCardMasterID").mouseleave(checkItemOpenningBalance)
+        //Send ajax => To Check Item
+        function checkItemOpenningBalance() {
+            var ItemID = document.getElementById("ItemCardMasterID").value;
+            var StockID = document.getElementById("StockID").value;
+            var UnitID = document.getElementById("UnitID").value;
+            $.ajax({
+                url: '@Url.Action("doesItemNameExist", "OpenningBalanceM")',
+                type: 'post',
+                data: {
+                    ItemID: ItemID,
+                    StockID: StockID,
+                    UnitID: UnitID
+                },
+                cache: false,
+                success: function (result) {
+                    console.log(result);
+                    if (result == true) {
+                        if (!confirm("The Selected Item It has Been Exist?") == true) {
+                            $("#Patch").val("");
+                            $("#Qty").val("")
+                            location.reload();
+                        }
+                    }
+                }
+            });
+        };
+        //After Add A New Order In The List, Clear Clean The Form For Add More Order.
+        function clearItem() {
+            $("#ExpertDate").val(),
+            $("#Qty").val(''),
+            $("#Patch").val('')
+        }
+        // After Add A New Order In The List, If You Want, You Can Remove It.
+        $(document).on('click', 'a.deleteItem', function (e) {
+            e.preventDefault();
+            var $self = $(this);
+            if ($(this).attr('data-itemId') == "0") {
+                $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
+                    $(this).remove();
+                });
+            }
+        });
+        //After Click Save Button Pass All Data View To Controller For Save Database Using ajax
+        function saveOpenning(data) {
+            return $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: "/OpenningBalanceM/Create",
+                data: data,
+                success: function (result) {
+                    alert(result)
+                    window.location.href = "/OpenningBalanceM/Index";
+                },
+                error: function () {
+                    alert("Error!")
+                }
+            });
+        }
+        //Collect Multiple Details List For Pass To Controller
+        $("#saveOpenning").click(function (e) {
+            e.preventDefault();
+            var DetalisArr = [];
+            DetalisArr.length = 0;
+            $.each($("#detailsTable tbody tr"), function () {
+                DetalisArr.push({
+                    StockID: $(this).find('td:eq(0)').html(),
+                    UnitID: $(this).find('td:eq(2)').html(),
+                    ExpertDate: $(this).find('td:eq(4)').html(),
+                    PatchID: $(this).find('td:eq(5)').html(),
+                    Qty: $(this).find('td:eq(6)').html()
+                });
+            });
+            var data = JSON.stringify({
+                ItemCardMasterID: $("#ItemCardMasterID").val(),
+                Date: $("#Date").val(),
+                OpenningDetails: DetalisArr
+            });
+            $.when(saveOpenning(data)).then(function (response) {
+                console.log(response);
+            }).fail(function (err) {
+                console.log(err);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+
+    </script>
+}

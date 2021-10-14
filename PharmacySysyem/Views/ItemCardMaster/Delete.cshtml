@@ -1,0 +1,72 @@
+﻿@model PharmacySysyem.Models.ItemCardMaster
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ItemCardMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifications.ClassificationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifications.ClassificationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Countrys.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Countrys.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suppliers.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suppliers.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

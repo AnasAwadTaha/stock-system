@@ -1,0 +1,240 @@
+﻿@using System.Web.Script.Serialization;
+@model PharmacySysyem.Models.ItemCardMaster
+<div class="panel-heading">
+    <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+        <h style="color:rgb(0, 0, 0);font-size:40px;margin-left:400px; font-weight:bold">Edit Item NO:@Model.ItemCardMasterID</h>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+            <div class="modal-body" style="max-height: calc(100vh - 200px); overflow-x:hidden;
+    overflow-y: scroll;">
+                @Html.HiddenFor(model => model.ItemCardMasterID, new { @id = "ItemCardMasterID" })
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.ItemName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.ItemName, new { htmlAttributes = new { @id = "Name", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ItemName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.CountryID, "CountryID", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("CountryID", null, htmlAttributes: new { @id = "CountryID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CountryID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.SupplierID, "SupplierID", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("SupplierID", null, htmlAttributes: new { @id = "SupplierID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.SupplierID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.ClassificationID, "ClassificationID", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("ClassificationID", null, htmlAttributes: new { id = "ClassificationID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ClassificationID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.CommName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.CommName, new { htmlAttributes = new { @id = "CommName", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CommName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Barcode, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.Barcode, new { htmlAttributes = new { @id = "Barcode", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Barcode, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.Status)
+                                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-left:5px;">
+                    <div class="row">
+                        <div class="col-md-2"><label>Unit</label></div>
+                        <div class="col-md-1"><label>Package</label></div>
+                        <div class="col-md-1"><label>CostPrice</label></div>
+                        <div class="col-md-1"><label>CurrntPrice</label></div>
+                        <div class="col-md-1"><label>AvrgeCost</label></div>
+                        <div class="col-md-1"><label>SalesPrice</label></div>
+                        @*<div class="col-md-1"><label>CostPriceAll</label></div>
+                        <div class="col-md-1"><label>Distrbut</label></div>*@
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">@Html.DropDownList("UnitID", null, new { @id = "UnitID", @class = "form-control" })</div>
+                        <div class="col-md-1"><input class=form-control type="text" id="Package" /></div>
+                        <div class="col-md-1"><input class=form-control type="text" id="CostPrice" /></div>
+                        <div class="col-md-1"><input class=form-control type="text" id="CurrntPrice" /></div>
+                        <div class="col-md-1"><input class=form-control type="text" id="AvrgeCost" /></div>
+                        <div class="col-md-1"><input class=form-control type="text" id="SalesPrice" /></div>
+                        @*<div class="col-md-1"><input class=form-control type="text" id="CostPriceAll" /></div>
+                        <div class="col-md-1"><input class=form-control type="text" id="Distrbut" /></div>*@
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1">
+                            <span class="pull-right"><a id="btnAdd" class="btn btn-primary glyphicon glyphicon-arrow-down"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <table id="tblItemDetalis" class="table">
+                    @{
+                        var D = ViewBag.Detalis;
+                        <tbody>
+                            @foreach (var item in D)
+                            {
+                                <tr style="background-color:white">
+                                    <td hidden>@item.UnitID</td>
+                                    <td>@item.Unit.UnitName</td>
+                                    <td>@item.Package</td>
+                                    <td>@item.CostPrice</td>
+                                    <td>@item.CurrntPrice </td>
+                                    <td>@item.AvrgeCost</td>
+                                    <td>@item.SalesPrice</td>
+                                    @*<td>@item.CostPriceAll</td>
+                                    <td>@item.Distrbut</td>*@
+                                    <td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    }
+                </table>
+                <div class="row col-md-offset-1">
+                    <div class="col-md-2 pull-right">
+                        <input type="button" value="Edit" id="btnEdit" class="btn btn-default" />
+                    </div>
+                    <div class="col-md-2 pull-left">
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                        }
+
+<script src="~/Content/Ajaxfile/jquery.min.js"></script>
+<script src="~/Content/Ajaxfile/json2.min.cache"></script>
+
+
+<script type="text/javascript">
+    clearItem();
+    //Add Multiple rows.
+    $("#btnAdd").click(function (e) {
+        e.preventDefault();
+        if ($.trim($("#Name").val()) == "" || $.trim($("#Package").val()) == "" || $.trim($("#CostPrice").val()) == "" || $.trim($("#CurrntPrice").val()) == "" || $.trim($("#AvrgeCost").val()) == "" || $.trim($("#SalesPrice").val()) == "") {
+            alert("Plz fill the item details!!");
+            return;
+        }
+        else
+            //declar var to
+            var UnitID = $("#UnitID").val(),
+        UnitName = $("#UnitID option:selected").text();
+        Package = $("#Package").val(),
+        costPrice = $("#CostPrice").val(),
+        CurrntPrice = $("#CurrntPrice").val(),
+        costavrage = $("#AvrgeCost").val(),
+        SalePrice = $("#SalesPrice").val(),
+        CostPriceAll = $("#CostPriceAll").val(),
+        Distrbute = $("#Distrbut").val(),
+        detailsTableBody = $("#tblItemDetalis tbody");
+        //add detailsTableBody
+        var Detalis = '<tr><td>' + UnitID + '</td><td>' + UnitName + '</td><td>' + Package + '</td><td>' + costPrice + '</td><td>' + CurrntPrice + '</td><td>' + costavrage + '</td><td>' + SalePrice + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
+        detailsTableBody.append(Detalis);
+        $('tbody tr td:nth-child(1)').hide(0);
+        clearItem();
+    });
+    //Clear Item
+    function clearItem() {
+        $("#Package").val(1);
+        $("#CostPrice").val(0);
+        $("#CurrntPrice").val(0);
+        $("#AvrgeCost").val(0);
+        $("#SalesPrice").val(0);
+    }
+    // After Add A New Order In The List, If You Want, You Can Remove It.
+    $(document).on('click', 'a.deleteItem', function (e) {
+        e.preventDefault();
+        var $self = $(this);
+        if ($(this).attr('data-itemId') == "0") {
+            $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
+                $(this).remove();
+            });
+        }
+    });
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $("body").on("click", "#btnEdit", function () {
+            //Loop through the Table rows and build a JSON array.
+            var ItemDetails = new Array();
+            $("#tblItemDetalis TBODY TR").each(function () {
+                var row = $(this);
+                var item = {};
+                //item.ItemCardDetalisID = row.find("TD").eq(0).html();
+                item.UnitID = row.find("TD").eq(0).html();
+                item.Package = row.find("TD").eq(2).html();
+                item.costPrice = row.find("TD").eq(3).html();
+                item.CurrntPrice = row.find("TD").eq(4).html();
+                item.AvrgeCost = row.find("TD").eq(5).html();
+                item.SalesPrice = row.find("TD").eq(6).html();
+                //item.CostPriceAll = row.find("TD").eq(6).html();
+                //item.Distrbut = row.find("TD").eq(7).html();
+                ItemDetails.push(item);
+            });
+            //
+            var data = JSON.stringify({
+                ItemName: $("#Name").val(),
+                CommName: $("#CommName").val(),
+                SupplierID: $("#SupplierID").val(),
+                Unit: $("#UnitID").val(),
+                CountryID: $("#CountryID").val(),
+                ClassificationID: $("#ClassificationID").val(),
+                Barcode: $("#Barcode").val(),
+                ItemCardMasterID: $("#ItemCardMasterID").val(),
+                det: ItemDetails
+            });
+            //Send the JSON array to Controller using AJAX.
+            $.ajax({
+                type: "POST",
+                url: "/ItemCardMaster/Edit",
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    alert(result);
+                    window.location.href = "/ItemCardMaster/Index";
+                },
+                error: function () {
+                    alert("Error!")
+                }
+            });
+        });
+    </script>
+
+}

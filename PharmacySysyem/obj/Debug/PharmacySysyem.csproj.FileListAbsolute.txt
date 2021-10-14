@@ -1,0 +1,372 @@
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\csc.exe
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\vbc.exe
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll.config
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.pdb
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\EntityFramework.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Owin.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\WebGrease.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.pdb
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\EntityFramework.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.pdb
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.InitialCreate.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csproj.GenerateResource.Cache
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.completeBasicDataModel.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.UpdateItemCardMasterID_inDetalis.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditNameModelToDisblayInView.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.SolveProblem.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditTypeDataColumnTolong.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addstockDbcontext.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csprojResolveAssemblyReference.cache
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.delete.resources
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PagedList.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.dll
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PagedList.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.xml
+C:\Users\Anas\Documents\Visual Studio 2015\Projects\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.MoveBarcodeFromDetailsToMaster.resources
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\csc.exe
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Collections.Immutable.dll
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Reflection.Metadata.dll
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\vbc.exe
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe
+D:\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe.config
+D:\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll.config
+D:\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll
+D:\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.pdb
+D:\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.dll
+D:\PharmacySysyem\PharmacySysyem\bin\EntityFramework.dll
+D:\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Web.Infrastructure.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.dll
+D:\PharmacySysyem\PharmacySysyem\bin\Owin.dll
+D:\PharmacySysyem\PharmacySysyem\bin\PagedList.dll
+D:\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.dll
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.dll
+D:\PharmacySysyem\PharmacySysyem\bin\WebGrease.dll
+D:\PharmacySysyem\PharmacySysyem\bin\EntityFramework.xml
+D:\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PharmacySysyem\PharmacySysyem\bin\PagedList.xml
+D:\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.xml
+D:\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.pdb
+D:\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.xml
+D:\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csprojResolveAssemblyReference.cache
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.InitialCreate.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.completeBasicDataModel.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.UpdateItemCardMasterID_inDetalis.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditNameModelToDisblayInView.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.SolveProblem.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditTypeDataColumnTolong.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addstockDbcontext.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.delete.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.MoveBarcodeFromDetailsToMaster.resources
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csproj.GenerateResource.Cache
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.dll
+D:\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.pdb
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\csc.exe
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Collections.Immutable.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Reflection.Metadata.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\vbc.exe
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe
+D:\project\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe.config
+D:\project\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll.config
+D:\project\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.pdb
+D:\project\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\EntityFramework.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Web.Infrastructure.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\Owin.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\PagedList.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\WebGrease.dll
+D:\project\PharmacySysyem\PharmacySysyem\bin\EntityFramework.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\PagedList.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.pdb
+D:\project\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.xml
+D:\project\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csprojResolveAssemblyReference.cache
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.InitialCreate.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.completeBasicDataModel.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.UpdateItemCardMasterID_inDetalis.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditNameModelToDisblayInView.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.SolveProblem.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditTypeDataColumnTolong.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addstockDbcontext.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.delete.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.MoveBarcodeFromDetailsToMaster.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csproj.GenerateResource.Cache
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.dll
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.pdb
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddOpenBlanceMAndDAndDbcontextCh.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.DeleteOPBalID.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.UpdateModelOpenBM.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.updateOpBaDSingle.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddTransationModelAndDeleteColFromOpenningMaster.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditOPenningBalDAddMasterOpenID.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.CreatePurchaseMasterDetalisModel.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddDiscoutToOrderDetalis.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddStockIDToOrderDetalis.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.DiscountRowInDetalis.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addPurchaseMasterID.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addPurchaseSupplierName.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddReceiptPurchaseMAndD.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.CreatePurInvmAndPurInvDModels.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.RemoveSupplierNameFromPurchaseM.resources
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\csc.exe
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Collections.Immutable.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\vbc.exe
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe
+C:\Software\PharmacySysyem\PharmacySysyem\bin\roslyn\VBCSCompiler.exe.config
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll.config
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PharmacySysyem.pdb
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\EntityFramework.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Web.Infrastructure.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Owin.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PagedList.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\WebGrease.dll
+C:\Software\PharmacySysyem\PharmacySysyem\bin\EntityFramework.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\EntityFramework.SqlServer.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PagedList.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\PagedList.Mvc.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Helpers.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Mvc.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Optimization.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.Razor.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Deployment.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\System.Web.WebPages.Razor.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Antlr3.Runtime.pdb
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Newtonsoft.Json.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Google.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Software\PharmacySysyem\PharmacySysyem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csprojResolveAssemblyReference.cache
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.InitialCreate.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.completeBasicDataModel.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.UpdateItemCardMasterID_inDetalis.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditNameModelToDisblayInView.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.SolveProblem.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditTypeDataColumnTolong.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addstockDbcontext.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.delete.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.MoveBarcodeFromDetailsToMaster.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddOpenBlanceMAndDAndDbcontextCh.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.DeleteOPBalID.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.UpdateModelOpenBM.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.updateOpBaDSingle.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddTransationModelAndDeleteColFromOpenningMaster.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditOPenningBalDAddMasterOpenID.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.CreatePurchaseMasterDetalisModel.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddDiscoutToOrderDetalis.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddStockIDToOrderDetalis.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.DiscountRowInDetalis.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addPurchaseMasterID.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addPurchaseSupplierName.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddReceiptPurchaseMAndD.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.CreatePurInvmAndPurInvDModels.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.RemoveSupplierNameFromPurchaseM.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.csproj.GenerateResource.Cache
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.dll
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.pdb
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddNavigationStockAndUnitToOpeningM.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddNavigationStockAndUnitToOpeningM.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.Solve.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditItemCardDetalisByDeleteCostAndWhole.resources
+D:\project\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddPackageToItemCardDetalis.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.Solve.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.EditItemCardDetalisByDeleteCostAndWhole.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.AddPackageToItemCardDetalis.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.Solve1.resources
+C:\Software\PharmacySysyem\PharmacySysyem\obj\Debug\PharmacySysyem.Migrations.addUserTable.resources

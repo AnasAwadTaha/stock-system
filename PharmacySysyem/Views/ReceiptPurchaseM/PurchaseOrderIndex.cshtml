@@ -1,0 +1,105 @@
+﻿@model PagedList.IPagedList<PharmacySysyem.Models.PurchaseOrderM>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+<div class="panel-heading">
+    <div class="modal-content" style=" background-color:rgba(255,255,255,0.40)">
+        <h style="color:rgb(0, 0, 0);font-size:40px;margin-left:350px; font-weight:bold">Purchase Order List</h>
+    </div>
+</div>
+@using (Html.BeginForm("PurchaseOrderIndex", "ReceiptPurchaseM", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-lg-6 pull-left">
+            <div class="col-md-6">@Html.TextBox("SearchString", null, new { @style = "padding-left: 1.375rem;width:250px;", @class = "form-control", @placeholder = "Find By OrderNo Or Supplier" })</div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <button type="submit" style=" float: left;
+  width: 10%;
+  height: 10%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 10px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  ">
+
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="col-md-6 pull-right">
+            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="location.href='@Url.Action("PurchaseOrderIndex", "ReceiptPurchaseM")';return false;">Purchase Balance</button>
+        </div>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Order No.", "PurchaseOrderIndex", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Suppliers", "PurchaseOrderIndex", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.DisplayName("Order Date")
+        </th>
+        <th>
+            @Html.DisplayName("Sum")
+        </th>
+        <th>
+            @Html.DisplayName("Discount")
+        </th>
+        <th>
+            @Html.DisplayName("Net Value")
+        </th>
+        <th>
+            @Html.DisplayName("Remark")
+        </th>
+        <th>
+            @Html.DisplayName("Confirmed")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Confirmed)
+            </td>
+            <td>
+                @Html.ActionLink("Receipt", "Receipt", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+</table>
+<br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

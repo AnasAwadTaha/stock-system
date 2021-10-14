@@ -1,0 +1,289 @@
+﻿@model PharmacySysyem.Models.PurchaseOrderM
+@{
+    ViewBag.Title = "Create";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="modal-content " style="background-color:rgba(255,255,255,0.40);max-height: calc(100vh - 200px);
+    overflow-y: auto;">
+            <div class="modal-header">
+                <h style="color:rgb(0, 0, 0);font-size:50px;margin-left:350px; font-weight:bold">Parchase Order</h>
+            </div>
+            <div id="ModalBody" class="modal-body" style="max-height: calc(100vh - 200px);
+    overflow-y: auto;">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.SupplierID, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("SupplierID", null, htmlAttributes: new { @id = "SupplierID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.SupplierID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.OrderDate, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @id = "OrderDate", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div id="ModalBody" class="modal-body" style="max-height: calc(100vh - 200px)">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="row" style="margin-left:5px;">
+                        <div class="row">
+                            <div class="col-md-2"><label class="control-label">Item</label></div>
+                            <div class="col-md-2"><label class="control-label">Stock</label></div>
+                            <div class="col-md-2"><label class="control-label">Unit</label></div>
+                            <div class="col-md-1"><label class="control-label">Qty</label></div>
+                            <div class="col-md-1"><label class="control-label">Price</label></div>
+                            <div class="col-md-1"><label class="control-label">TotalPrice</label></div>
+                            <div class="col-md-1"><label class="control-label">Discount</label></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                @Html.DropDownList("ItemID", null, new { @id = "ItemID", @class = "form-control" })
+                            </div>
+                            <div class="col-md-2">
+                                @Html.DropDownList("StockID", null, new { @id = "StockID", @class = "form-control" })
+                            </div>
+                            <div class="col-md-2">
+                                @Html.DropDownList("UnitID", null, new { @id = "UnitID", @class = "form-control" })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text" id="Qty" name="Qty" placeholder="Qty" class="form-control" />
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text" id="Price" name="Price" placeholder="Price" class="form-control" />
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text" id="TotalPrice" name="TotalPrice" placeholder="TotalPrice" class="form-control" />
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text" id="DiscountItem" name="DiscountItem" placeholder="Discount" class="form-control" />
+                            </div>
+                            <div class="col-md-1">
+                                <span class="pull-right"><a id="addToList" class="btn btn-primary glyphicon glyphicon-arrow-down"></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <table id="detailsTable" class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:20%"></th>
+                                <th style="width:13%"></th>
+                                <th style="width:15%"></th>
+                                <th style="width:15%"></th>
+                                <th style="width:15%"></th>
+                                <th style="width:15%"></th>
+                                <th style="width:15%"></th>
+                                <th style="width:15%"></th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color:white"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td style="background-color:#a5bbb8"><label style="font-size:15px;">Total:</label></td>
+                                <td style="font-size:15px; background-color:#a5bbb8" name="Total" id="Total"></td>
+                                <td style="background-color:#f1bcbc"><label style="font-size:15px;">Discount:</label></td>
+                                <td style="font-size:15px; background-color:#f1bcbc" name="Discount" id="Discount"></td>
+                                <td style="background-color:#b4d5bb"><label style="font-size:15px;">Net Val:</label></td>
+                                <td style="font-size:15px; background-color:#b4d5bb" id="NetValue"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-default" data-dismiss="modal">@Html.ActionLink("Back to List", "Index")</button>
+                <input id="saveOrder" type="submit"  value="Save" class="btn btn-primary"/>
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        //Load Page Just For Method And Functions
+        $('tfoot tr:nth-child(1) td:eq(1)').text(0)
+        $('tfoot tr:nth-child(1) td:eq(3)').text(0)
+        $('tfoot tr:nth-child(1) td:eq(5)').text(0)
+        $('#DiscountItem').val(0)
+        //After Add A New Order In The List,Get Sum
+        function SumTotal() {
+            var total = $('tbody td:nth-child(9)').toArray().reduce(function (sum, el) {
+                var value = isNaN($(el).text()) ? 0 : parseInt($(el).text(), 10);
+                return sum + value;
+            }, 0);
+            //  total = parseFloat(total)
+            $('#Total').text(total.toFixed(2));
+        }
+        //Add Amount = Price*Qty
+        $(document).ready(function () {
+            $('#Price').keyup(calculate);
+            $('#Qty').keyup(calculate);
+        });
+        function calculate(e) {
+            $('#TotalPrice').val($('#Price').val() * $('#Qty').val());
+        }
+        //Claclate Sum Total Discount
+        function SumDiscount() {
+            var total = $('tbody td:nth-child(10)').toArray().reduce(function (sum, el) {
+                var value = isNaN($(el).text()) ? 0 : parseInt($(el).text(), 10);
+                return sum + value;
+            }, 0);
+            if (total > 0 ? $('#Discount').text(total) : $('#Discount').text(0));
+        }
+        //Sum Total - Discount
+        function SumTotalAbstractDiscount() {
+            var Discount = parseInt($('tfoot tr:nth-child(1) td:eq(3)').text());
+            var Total = parseInt($('tfoot tr:nth-child(1) td:eq(1)').text());
+            sumTotal = Total - Discount
+            $('tfoot tr:nth-child(1) td:eq(5)').text(sumTotal);
+        }
+        function ColumnHide() {
+            $('tbody tr td:nth-child(1)').hide(0);
+            $('tbody tr td:nth-child(2)').hide(0);
+            $('tbody tr td:nth-child(4)').hide(0);
+        }
+    </script>
+    <script type="text/javascript">
+        //Show Modal.
+        function addNewOrder() {
+            $("#newOrderModal").modal();
+        }
+        //Add Multiple Rows.
+        $("#addToList").click(function (e) {
+            e.preventDefault();
+            if ($.trim($("#Qty").val()) == "" || $.trim($("#Price").val()) == "" || $.trim($("#TotalPrice").val()) == "") {
+                alert("Plz fill the item details!!");
+                return;
+            }
+            else
+                var
+            ItemID = $("#ItemID").val(),
+            ItemName = $("#ItemID option:selected").html(),
+            StockID = $("#StockID").val(),
+            StockName = $("#StockID option:selected").html(),
+            UnitID = $("#UnitID").val(),
+            UnitName = $("#UnitID option:selected").html(),
+            Qty = $("#Qty").val(),
+            Price = $("#Price").val(),
+              TotalPrice = $("#TotalPrice").val(),
+               DiscountItem = $("#DiscountItem").val(),
+            detailsTableBody = $("#detailsTable tbody");
+            //add detailsTableBody
+            var Detalis = '<tr><td>' + ItemID + '</td><td>' + ItemName + '</td><td>' + StockID + '</td><td>' + StockName + '</td><td>' + UnitID + '</td><td>' + UnitName + '</td><td>' + Qty + '</td><td>' + Price + '</td><td>' + TotalPrice + '</td><td>' + DiscountItem + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
+            detailsTableBody.append(Detalis);
+            SumTotal();
+            SumDiscount();
+            SumTotalAbstractDiscount();
+            clearItem();
+            $('tbody tr td:nth-child(1)').hide(0);
+            $('tbody tr td:nth-child(3)').hide(0);
+            $('tbody tr td:nth-child(5)').hide(0);
+           // ColumnHide();
+        });
+        //After Add A New Order In The List, Clear Clean The Form For Add More Order.
+        function clearItem() {
+            $("#Qty").val(''),
+              $("#Price").val(''),
+              $("#TotalPrice").val(''),
+              $("#DiscountItem").val(''),
+              $('#DiscountItem').val(0)
+        }
+        // After Add A New Order In The List, If You Want, You Can Remove It.
+        $(document).on('click', 'a.deleteItem', function (e) {
+            e.preventDefault();
+            var $self = $(this);
+            if ($(this).attr('data-itemId') == "0") {
+                $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
+                    $(this).remove();
+                    SumTotal();
+                    SumDiscount();
+                    SumTotalAbstractDiscount();
+                });
+            }
+        });
+        //After Click Save Button Pass All Data View To Controller For Save Database Using ajax
+        function saveOrder(data) {
+            return $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: "/PurchaseOrderM/Create",
+                data: data,
+                success: function (result) {
+                    alert(result);
+                    window.location.href = "/PurchaseOrderM/Index";
+                },
+                error: function () {
+                    alert("Error!")
+                }
+            });
+        }
+        //Collect Multiple Details List For Pass To Controller
+        $("#saveOrder").click(function (e) {
+            e.preventDefault();
+            //Loop through the Table rows and build a JSON array.
+            var ItemDetails = new Array();
+            $("#detailsTable TBODY TR").each(function () {
+                var row = $(this);
+                var item = {};
+                //item.ItemCardDetalisID = row.find("TD").eq(0).html();
+                item.ItemCardMasterID = row.find("TD").eq(0).html();
+                item.StockID = row.find("TD").eq(2).html();
+                item.UnitID = row.find("TD").eq(4).html();
+                item.Qty = row.find("TD").eq(6).html();
+                item.Price = row.find("TD").eq(7).html();
+                item.TotalPrice = row.find("TD").eq(8).html();
+                item.DiscountItem = row.find("TD").eq(9).html();
+                ItemDetails.push(item);
+            });
+            var data = JSON.stringify({
+                SupplierID: $("#SupplierID").val(),
+                OrderDate: $("#OrderDate").val(),
+                Sum: $('tfoot tr:nth-child(1) td:eq(1)').text(),
+                Discount: $('tfoot tr:nth-child(1) td:eq(3)').text(),
+                NetValue: $('tfoot tr:nth-child(1) td:eq(5)').text(),
+                PurchaseDet: ItemDetails
+            });
+
+            $.when(saveOrder(data)).then(function (response) {
+                console.log(response);
+            }).fail(function (err) {
+                console.log(err);
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#UnitID').on('keyup', function () {
+                var ItemID = document.getElementById("ItemID").value;
+                var UnitID = document.getElementById("UnitID").value;
+                $.ajax({
+                    url: '@Url.Action("GetItemPriceById", "PurchaseOrderM")',
+                    type: 'GET',
+                    data: {
+                        ItemID: ItemID,
+                        UnitID: UnitID
+                    },
+                    cache: false,
+                    success: function (ItemPrice) {
+                        price = parseFloat(ItemPrice)
+                        $('#Price').val(price.toFixed(2));
+                    }
+                });
+            });
+        });
+    </script>
+}

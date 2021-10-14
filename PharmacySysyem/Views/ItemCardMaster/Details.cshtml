@@ -1,0 +1,66 @@
+﻿@model PharmacySysyem.Models.ItemCardMaster
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemCardMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Classifications.ClassificationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classifications.ClassificationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Countrys.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Countrys.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suppliers.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suppliers.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemCardMasterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

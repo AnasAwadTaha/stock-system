@@ -1,0 +1,125 @@
+﻿@using System.Web.Script.Serialization;
+
+@{
+    ViewBag.Title = "MvcWithKnockout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p>
+    <button class="btn btn-primary" id="create">Create</button>
+</p>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Unit List</h2>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.loadtemplate/1.5.10/jquery.loadTemplate.js" integrity="sha512-yfJoFJUa+1N2xfxSVIeABC+t37Jz9XnmgSiWKeFhNKMoH0NQLRhyV90AiaMDQJl+nTZxymqEILloSbP+jfs5oA==" crossorigin="anonymous"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" integrity="sha512-2AL/VEauKkZqQU9BHgnv48OhXcJPx9vdzxN1JrKDVc4FPU/MEE/BZ6d9l0mP7VmvLsjtYwqiYQpDskK9dG8KBA==" crossorigin="anonymous"></script>
+
+
+<form>
+    <div>
+        <table class="table">
+            <tr style="background-color:cadetblue">
+                <th>
+                    Unit Name
+                </th>
+                <th></th>
+            </tr>
+            <tbody data-bind="foreach: lookupCollection">
+                <tr style="background-color:white" data-bind="template: { name: Mode, data: $data }"></tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+@section Scripts {
+    <script type="text/javascript">
+        viewModel = {
+            lookupCollection: ko.observableArray()
+        };
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Unit/GetUnit",
+            }).done(function (data) {
+                $(data).each(function (index, element) {
+                    var mappedItem =
+                    {
+                        ID: ko.observable(element.ID),
+                        UnitName: ko.observable(element.UnitName),
+                        Mode: ko.observable("display")
+                    };
+                    viewModel.lookupCollection.push(mappedItem);
+                });
+                ko.applyBindings(viewModel);
+            })
+        });
+    </script>
+    <script>
+        $(document).on("click", ".kout-edit", null, function (ev) {
+            var current = ko.dataFor(this);
+            current.Mode("edit");
+        })
+
+        $(document).on("click", ".kout-update", null, function (ev) {
+            var current = ko.dataFor(this);
+            current.Mode("display");
+        })
+      
+
+        $(document).on("click", "#create", null, function (ev) {
+            var current = {
+                ID: ko.observable(0),
+                UnitName: ko.observable(),
+                Mode: ko.observable("edit")
+            }
+            viewModel.lookupCollection.push(current);
+        });
+        function saveData(currentData) {
+            var postUrl = "";
+            var submitData = {
+                ID: currentData.ID(),
+                UnitName: currentData.Value()
+            };
+            if (currentData.ID && currentData.ID > 0) {
+                postUrl = "/Unit/Edit"
+            }
+            else {
+                postUrl = "/Unit/Create"
+            }
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: postUrl,
+                data: JSON.stringify(submitData)
+            }).done(function (ID) {
+                currentData.ID(ID);
+            }).error(function (ex) {
+                alert("ERROR Saving");
+            })
+        }
+    </script>
+
+  <script type="text/html" id="display">
+   
+    <td data-bind="text: UnitName"></td>
+    <td>
+        <button class="btn btn-success kout-edit">Edit</button>
+        <button class="btn btn-danger kout-delete">Delete</button>
+    </td>
+</script>
+
+<script type="text/html" id="edit">
+    <td><input type="text" data-bind="value: UnitName" /></td>
+    <td>
+        <button class="btn btn-success kout-save">Update</button>
+        <button class="btn btn-danger kout-cancel">Cancel</button>
+    </td>
+</script>
+}
+

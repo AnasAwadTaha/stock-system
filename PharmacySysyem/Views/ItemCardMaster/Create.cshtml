@@ -1,0 +1,338 @@
+﻿@model PharmacySysyem.Models.ItemCardMaster
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+            <div class="panel-heading">
+                <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+                    <h style="color:rgb(0, 0, 0);font-size:40px;margin-left:400px; font-weight:bold">New Item Card</h>
+                </div>
+            </div>
+            <div id="ModalBody" class="modal-body" style="max-height: calc(100vh - 200px);
+    overflow-y: auto;">
+                @*Item card master*@
+                <input type="hidden" id="CustomerId" />
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        <label class="control-label col-md-4">
+                            Item Name
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="name" name="name" placeholder="Item Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="control-label col-md-4">
+                            Trade
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="CommName" name="CommName" placeholder="Trade Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Barcode, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            <input type="text" id="Barcode" name="Barcode" placeholder="Barcode" class="form-control" />
+                            @Html.ValidationMessageFor(model => model.Barcode, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        <label class="control-label col-md-4">
+                            Classification
+                        </label>
+                        <div class="col-md-8">
+                            @Html.DropDownList("ClassificationID", null, htmlAttributes: new { @id = "ClassificationID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ClassificationID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.CountryID, "Country", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("CountryID", null, htmlAttributes: new { @id = "CountryID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CountryID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.SupplierID, "Supplier", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("SupplierID", null, htmlAttributes: new { @id = "SupplierID", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.SupplierID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.Status)
+                                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="ItemCardMasterID" />
+                <div class="row col-md-12">
+                    <div class="form-group col-md-2">
+                        <label class="control-label">
+                            Unit
+                        </label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label class="control-label">
+                            Package
+                        </label>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label class="control-label">
+                            cost Price
+                        </label>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label class="control-label">
+                            Currnt Price
+                        </label>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label class="control-label">
+                            cost avrage
+                        </label>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label class="control-label">
+                            Sale Price
+                        </label>
+                    </div>
+                    @*<div class="form-group col-sm-2">
+                            <label class="control-label">
+                                Wholesale
+                            </label>
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <label class="control-label">
+                                Distrbute
+                            </label>
+                        </div>*@
+                </div>
+                <div class="row col-md-12">
+                    <input type="hidden" id="ItemCardDetalisID" />
+                    <div class="form-group col-md-2">
+                        @Html.DropDownList("UnitID", null, new { @id = "UnitID", @class = "form-control" })
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div>
+                            <input type="number" value="1" id="Package" name="Package" placeholder="Package" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div>
+                            <input type="number" id="costPrice" name="costPrice" placeholder="cost Price" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div>
+                            <input type="number" id="CurrntPrice" name="CurrntPrice" placeholder="Currnt Price" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div>
+                            <input type="number" id="costavrage" name="costavrage" placeholder="cost avrage" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div>
+                            <input type="number" id="SalePrice" name="SalePrice" placeholder="Sale Price" class="form-control" />
+                        </div>
+                    </div>
+                    @*<div class="form-group col-md-2">
+                            <div>
+                                <input type="text" id="Wholesale" name="Wholesale" placeholder="Wholesale" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div>
+                                <input type="text" id="Distrbute" name="Distrbute" placeholder="Distrbute" class="form-control" />
+                            </div>
+                        </div>*@
+
+                    <div class="col-md-1"><span class="pull-right"><a id="addToList" class="btn btn-primary glyphicon glyphicon-arrow-down"></a></span></div>
+                </div>
+                <table id="detailsTable" class="table">
+                    <thead>
+
+                    </thead>
+                    <tbody style="background-color:white"></tbody>
+                </table>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">@Html.ActionLink("Back to List", "Index")</button>
+                    <button id="saveOrder" type="submit" class="btn btn-primary">Save Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        //BY Default CostPrice , currntPrice And CostPrice The same
+        $(document).ready(function () {
+            $('#costPrice').keyup(calculate);
+            $('#costPrice').change(calculate);
+        });
+        function calculate(e) {
+            $('#CurrntPrice').val($('#costPrice').val());
+            $('#costavrage').val($('#costPrice').val());
+        }
+        //Calculte the Small Unit By CostPrice / packege to get Small Unit
+        //function calculatePackage(e) {
+        //    $('#CurrntPrice').val($('#costPrice').val());
+        //    $('#costavrage').val($('#costPrice').val());
+        //}
+        //Show Modal.
+        function addNewOrder() {
+            $("#newOrderModal").modal();
+        }
+        //Add Multiple rows.
+        $("#addToList").click(function (e) {
+            e.preventDefault();
+            if ($.trim($("#name").val()) == "" || $.trim($("#Package").val()) == "" || $.trim($("#costPrice").val()) == "" || $.trim($("#CurrntPrice").val()) == "" || $.trim($("#costavrage").val()) == "" || $.trim($("#SalePrice").val()) == "") {
+                alert("Plz fill the item details!!");
+                return;
+            }
+            else
+                //declar var to
+                var UnitID = $("#UnitID").val(),
+            UnitName = $("#UnitID option:selected").text();
+            Package = $("#Package").val(),
+            costPrice = $("#costPrice").val(),
+            CurrntPrice = $("#CurrntPrice").val(),
+            costavrage = $("#costavrage").val(),
+            SalePrice = $("#SalePrice").val(),
+            //Wholesale = $("#Wholesale").val(),
+            //Distrbute = $("#Distrbute").val(),
+            detailsTableBody = $("#detailsTable tbody");
+            //add detailsTableBody
+            var Detalis = '<tr><td>' + UnitID + '</td><td>' + UnitName + '</td><td>' + Package + '</td><td>' + costPrice + '</td><td>' + CurrntPrice + '</td><td>' + costavrage + '</td><td>' + SalePrice + '</td><td><a data-itemId="0" href="#" class="deleteItem">Remove</a></td></tr>';
+            detailsTableBody.append(Detalis);
+            clearItem();
+            $('tbody tr td:nth-child(1)').hide(0);
+            //Check the row Table If row > 1 Calculate Small Unit Price
+            var rowCount = $('#detailsTable Tbody tr').length;
+            if (rowCount > 1) {
+                GetSmallUnitPrice();
+            }
+        });
+        //GetSmallUnitPrice
+        function GetSmallUnitPrice() {
+            var X = parseInt($('tbody tr:nth-child(1) td:eq(3)').text());
+            var Y = parseInt($('tbody tr:nth-child(2) td:eq(2)').text());
+            var Z = parseInt(X / Y);
+            ($('tbody tr:nth-child(2) td:eq(3)').text(Z) && $('tbody tr:nth-child(2) td:eq(4)').text(Z) && $('tbody tr:nth-child(2) td:eq(5)').text(Z) && $('tbody tr:nth-child(2) td:eq(6)').text(Z))
+        }
+        //After Add A New Order In The List, Clear Clean The Form For Add More Order.
+        function clearItem() {
+            $("#Package").val(1),
+              $("#costPrice").val(''),
+              $("#CurrntPrice").val(''),
+              $("#costavrage").val(''),
+              $("#SalePrice").val('')
+            //$("#Wholesale").val(''),
+            //$("#Distrbute").val('')
+        }
+        // After Add A New Order In The List, If You Want, You Can Remove It.
+        $(document).on('click', 'a.deleteItem', function (e) {
+            e.preventDefault();
+            var $self = $(this);
+            if ($(this).attr('data-itemId') == "0") {
+                $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
+                    $(this).remove();
+                });
+            }
+        });
+        //After Click Save Button Pass All Data View To Controller For Save Database Using ajax
+        function saveOrder(data) {
+            return $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: "/ItemCardMaster/SaveItem",
+                data: data,
+                success: function (result) {
+                    alert(result);
+                    window.location.href = "/ItemCardMaster/Index";
+                },
+                error: function () {
+                    alert("Error!")
+                }
+            });
+        }
+        //Collect Multiple Details List For Pass To Controller
+        $("#saveOrder").click(function (e) {
+            e.preventDefault();
+            var DetalisArr = [];
+            DetalisArr.length = 0;
+            $.each($("#detailsTable tbody tr"), function () {
+                DetalisArr.push({
+                    UnitID: $(this).find('td:eq(0)').html(),
+                    Package: $(this).find('td:eq(2)').html(),
+                    costPrice: $(this).find('td:eq(3)').html(),
+                    CurrntPrice: $(this).find('td:eq(4)').html(),
+                    AvrgeCost: $(this).find('td:eq(5)').html(),
+                    SalesPrice: $(this).find('td:eq(6)').html()
+                    //CostPriceAll: $(this).find('td:eq(5)').html(),
+                    //Distrbut: $(this).find('td:eq(6)').html()
+                });
+            });
+            var data = JSON.stringify({
+                name: $("#name").val(),
+                CommName: $("#CommName").val(),
+                SupplierID: $("#SupplierID").val(),
+                // Unit: $("#UnitID").val(),
+                CountryID: $("#CountryID").val(),
+                ClassificationID: $("#ClassificationID").val(),
+                Barcode: $("#Barcode").val(),
+                Details: DetalisArr
+            });
+
+            $.when(saveOrder(data)).then(function (response) {
+                console.log(response);
+            }).fail(function (err) {
+                console.log(err);
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#name").change(function () {
+                var ItemName = document.getElementById("name").value;
+                $.ajax({
+                    url: '@Url.Action("doesItemNameExist", "ItemCardMaster")',
+                    type: 'post',
+                    data: {
+                        ItemName: ItemName
+                    },
+                    cache: false,
+                    success: function (result) {
+                        console.log(result);
+                        if (result == true) {
+                            alert('Exist');
+                            $("#name").val("");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+}
+
+

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Stock System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:transparent">
+        <div class="navbar-inner">
+            <div class="container">
+                @Html.ActionLink("Stock System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        @*<li class="active"><a href="#">Home</a></li>*@
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" style="font-size:large;font-style:initial" data-toggle="dropdown" href="#">
+                                Basic Data
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="font-size:large">@Html.ActionLink("expences", "Index", "expence")</li>
+                                <li style="font-size:large">@Html.ActionLink("Units", "Index", "Unit")</li>
+                                <li style="font-size:large">@Html.ActionLink("Suppliers", "Index", "Supplier")</li>
+                                <li style="font-size:large">@Html.ActionLink("Stocks", "Index", "Stock")</li>
+                                <li style="font-size:large">@Html.ActionLink("Classifcation", "Index", "Classification")</li>
+                                <li style="font-size:large">@Html.ActionLink("Country", "Index", "Countrie")</li>
+                                <li style="font-size:large">@Html.ActionLink("Item Card", "Index", "ItemCardMaster")</li>
+                                <li style="font-size:large">@Html.ActionLink("Openning Balance", "Index", "OpenningBalanceM")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" style="font-size:large;font-style:initial;" data-toggle="dropdown" href="#">
+                                Purchase
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="font-size:large">@Html.ActionLink("Purchase Order", "Index", "PurchaseOrderM")</li>
+                                <li style="font-size:large">@Html.ActionLink("Note Receipt Goods", "Index", "ReceiptPurchaseM")</li>
+                                <li style="font-size:large">@Html.ActionLink("Purchase Invoice", "Index", "PurchaseInvoiceM")</li>
+                                <li style="font-size:large">@Html.ActionLink("المخازن", "Index", "Stock")</li>
+                                <li style="font-size:large">@Html.ActionLink("التصنيفات", "Index", "Classification")</li>
+                                <li style="font-size:large">@Html.ActionLink("البلدان", "Index", "Countrie")</li>
+                                <li style="font-size:large">@Html.ActionLink("كرت الصنف", "Index", "ItemCardMaster")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" style="font-size:large;font-style:initial" data-toggle="dropdown" href="#">
+                                Salse
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="font-size:large">@Html.ActionLink("Purchase Order", "Index", "PurchaseOrderM")</li>
+                                <li style="font-size:large">@Html.ActionLink("Note Receipt Goods", "Index", "ReceiptPurchaseM")</li>
+                                <li style="font-size:large">@Html.ActionLink("Purchase Invoice", "Index", "PurchaseInvoiceM")</li>
+                                <li style="font-size:large">@Html.ActionLink("المخازن", "Index", "Stock")</li>
+                                <li style="font-size:large">@Html.ActionLink("التصنيفات", "Index", "Classification")</li>
+                                <li style="font-size:large">@Html.ActionLink("البلدان", "Index", "Countrie")</li>
+                                <li style="font-size:large">@Html.ActionLink("كرت الصنف", "Index", "ItemCardMaster")</li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Stock System</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

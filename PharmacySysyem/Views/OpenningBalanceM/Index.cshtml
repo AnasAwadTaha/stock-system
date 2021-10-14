@@ -1,0 +1,59 @@
+﻿@model PagedList.IPagedList<PharmacySysyem.Models.OpenningBalanceM>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel-heading">
+    <div class="modal-content " style=" background-color:rgba(255,255,255,0.40)">
+        <h style="color:rgb(0, 0, 0);font-size:40px;margin-left:300px; font-weight:bold">Openning Balance List</h>
+    </div>
+</div>
+
+@using (Html.BeginForm("Index", "OpenningBalanceM", FormMethod.Get))
+{
+
+    <div class="row">
+        <form class="pull-left">
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </form>
+        <form class="pull-right">
+            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="location.href='@Url.Action("Create", "OpenningBalanceM")';return false;">Openning Balance</button>
+        </form>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Item Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemCardMasters.ItemName)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+

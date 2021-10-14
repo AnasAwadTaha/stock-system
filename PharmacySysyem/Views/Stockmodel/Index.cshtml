@@ -1,0 +1,89 @@
+﻿@model IEnumerable<PharmacySysyem.Models.Stockmodel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Pass Data From View To Controller Using Ajax In MVC</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#btnSend").click(function () {
+
+                var Stock = {  StockName: $("#StockName").val(), StockPrice: $("#StockPrice").val() };
+
+                $.ajax({
+
+                    type: "POST",
+
+                    url: '@Url.Action("GetJsonData", "Stock")',
+
+                    dataType: "json",
+
+                    data: JSON.stringify({ Stock }),
+
+                    contentType: "application/json; charset=utf-8",
+
+                    dataType: "json",
+
+                    success: function (data) {
+
+                        alert(data.StockName + "-"+  data.StockPrice);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <p>
+
+        StockId :<input class="form-control" type="text" placeholder="Id" id="stockId">
+
+        <br />
+
+        StockName : <input class="form-control" type="text" placeholder="Name" id="StockName">
+
+        <br>
+
+        StockPrice : <input class="form-control" type="number" placeholder="StockPrice" id="StockPrice">
+
+        <br>
+
+    </p>
+
+    <br />
+
+    <input type="button" id="btnSend" name="Send" value="Send" />
+
+</body>
+
+</html>

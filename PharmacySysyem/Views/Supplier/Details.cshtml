@@ -1,0 +1,90 @@
+﻿@model PharmacySysyem.Models.Supplier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resp1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resp1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneResp1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneResp1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resp2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resp2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneResp2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneResp2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckStop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckStop)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SupplierID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

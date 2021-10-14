@@ -1,0 +1,88 @@
+﻿@model IEnumerable<PharmacySysyem.Models.PurchaseInvoiceM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel-heading">
+    <div class="modal-content" style=" background-color:rgba(255,255,255,0.40)">
+        <h style="color:rgb(0, 0, 0);font-size:40px;margin-left:350px; font-weight:bold">Purchase Invoice List</h>
+    </div>
+</div>
+@using (Html.BeginForm("Index", "PurchaseInvoiceM", FormMethod.Get))
+{
+    <div class="row">
+        <form class="pull-left">
+            Find by No. @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </form>
+        <form class="pull-right">
+            <button style="margin-right:10px" class="btn btn-primary pull-right" onclick="location.href='@Url.Action("Create", "PurchaseInvoiceM")';return false;">Purchase Balance</button>
+        </form>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.Raw("No.")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.SupplierID)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseDate)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.SupplierID)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
