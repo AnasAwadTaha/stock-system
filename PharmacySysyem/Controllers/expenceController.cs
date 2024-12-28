@@ -13,6 +13,7 @@ namespace PharmacySysyem.Controllers
 {
     public class expenceController : Controller
     {
+        //to do move the db context to repo  
         private PharmacyContext db = new PharmacyContext();
 
         // GET: expence
@@ -115,7 +116,7 @@ namespace PharmacySysyem.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        // add it with the repo
         protected override void Dispose(bool disposing)
         {
             if (disposing)
